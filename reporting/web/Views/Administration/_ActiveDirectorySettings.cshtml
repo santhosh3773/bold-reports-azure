@@ -11,6 +11,10 @@
     var reportServerResourceUrl = globalAppSettings.SystemSettings.CDNLink.TrimEnd('/');
     var model = ViewBag.GranularPermissions as Dictionary<object, bool>;
     var isAdmin = _identityResponse.IsAdmin;
+    var helpSiteBaseUrl = ServerAppConfig.AppSettings.Documentation.BaseUri;
+    var userDirectoryWindowsHelpSiteUrl = helpSiteBaseUrl + GlobalAppSettings.GetHelpSiteUrl(HelpSiteUrlNames.ADSettings);
+    var userDirectoryAzureHelpSiteUrl = helpSiteBaseUrl + GlobalAppSettings.GetHelpSiteUrl(HelpSiteUrlNames.AzureAdSettings);
+    var userDirectoryDatabaseHelpSiteUrl = helpSiteBaseUrl + GlobalAppSettings.GetHelpSiteUrl(HelpSiteUrlNames.DatabaseSettings);
 }
 <script>
     var defaultAuthentication = "";
@@ -46,9 +50,9 @@
         var getDatabaseUrl = "@Url.Action("GetDatabaseList", "UserManagement")";
         var getTableRelationUrl = "@Url.Action("GetTableRelation", "UserManagement")";
         var addUserDirectoryLogUrl = "@Url.Action("AddSystemLogForUserDirectory", "Administration")";
-        var userDirectoryAzure = helpSiteBaseUrl + "/site-settings/azure-active-directory";
-        var userDirectoryDatabase = helpSiteBaseUrl + "/site-settings/database-settings";
-        var userDirectoryWindows = helpSiteBaseUrl + "/site-settings/windows-ad-settings";
+        var userDirectoryAzure = "@userDirectoryAzureHelpSiteUrl";
+        var userDirectoryDatabase = "@userDirectoryDatabaseHelpSiteUrl";
+        var userDirectoryWindows = "@userDirectoryWindowsHelpSiteUrl";
         var SystemSettingsProperties = @Html.Raw(Json.Serialize(ViewBag.SystemSettings));
         var isAzureApplication = @Json.Serialize(isAzureApplication);
         var enableWindowsAD = @Json.Serialize(enableWindowsAD);

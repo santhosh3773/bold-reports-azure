@@ -9,7 +9,8 @@
             AvoidSpecailCharacters: "[[[Please avoid special characters]]]",
             EnterPassword: "[[[Please enter the password]]]",
             PasswordRule1: "[[[Password must meet the following requirements. It must contain,]]]",
-            PasswordRule2: "[[[at least 6 characters]]]",
+            PasswordRule2_Length1: "[[[at least ]]]",
+            PasswordRule2_Length2: "[[[ characters]]]",
             PasswordRule3: "[[[1 uppercase]]]",
             PasswordRule4: "[[[1 lowercase]]]",
             PasswordRule5: "[[[1 numeric]]]",
@@ -17,9 +18,12 @@
             UserNameValidator: "[[[Please enter username.]]]",
             PasswordValidator: "[[[Please enter password.]]]",
             BrowsePath: "[[[Browse file path]]]",
+            ViewMore: "[[[View more]]]",
+            ViewLess: "[[[View less]]]",
 
             //Authentication Settings
             DefaultAuthenticationSettings: "[[[Default Authentication Provider]]]",
+            DefaultAuthenticationConfirmation: "[[[Default Authentication Confirmation]]]",
             Provider: "[[[Provider]]]",
             SSOSettings: "[[[SSO Settings]]]",
             SSOSettingsUpdated: "[[[SSO settings have been updated.]]]",
@@ -46,6 +50,8 @@
 
             //License Settings
             ManageLicense: "[[[Manage License]]]",
+            UpdateLicense: "[[[Update License]]]",
+            UploadLicense: "[[[Upload License]]]",
             LicenseUpdated: "[[[The license has been updated successfully.]]]",
             LicenseUpdateFailed: "[[[Failed to update the license.]]]",
             ChangeSubscriptionDialogHeader: "[[[Change Subscription]]]",
@@ -78,12 +84,14 @@
             postgresPortInfo: "[[[Specify the TCP port number that the server is listening for connections. The default port number is 5432.]]]",
             MailSendFailureMessage1: "[[[Unable to send test email.]]]",
             MailSendFailureMessage2: "[[[View More]]]",
+            SecuritySettings: "[[[Security Settings]]]",
 
             //Offlinelicenupdate.js
             InvalidLicFileFormat: "[[[Invalid file type. Please select .lic format only]]]",
             LicenseFileCorrupt: "[[[License file is corrupted. Please get the new license file from]]]",
 
             //Email Settings
+            SendTestMail: "[[[Send Test Email]]]",
             SenderEmailValidator: "[[[Please enter sender email address]]]",
             SenderNameValidator: "[[[Please enter sender name]]]",
             MailSMTPServerValidator: "[[[Please enter SMTP server]]]",
@@ -321,6 +329,13 @@
             GrantSiteAcessHeaderDescription: "[[[Select the sites to which you want to grant access.]]]",
             GrantSiteAccessButton: "[[[Grant access]]]",
             ManageUserAccess: "[[[Manage User Access]]]",
+            UnlockUser: "[[[Unlock User]]]",
+            UserUnlocked: "[[[User has been unlocked successfully]]]",
+            UserUnlockedError: "[[[An error occured while unlocking user]]]",
+            MinLengthEmpty: "[[[Please enter the value.]]]",
+            MinLengthNeeded: "[[[Passwords must be at least 6 characters long.]]]",
+            Users: "[[[Users]]]",
+            FailedToGetUsers: "[[[Failed to get users]]]",
 
             //UserManagementProfile.js
             PhoneNumberValidator: "[[[Please enter the valid phone number]]]",
@@ -336,11 +351,6 @@
             DeleteProfilePictureConfirm: "[[[Are you sure you want to delete the profile picture?]]]",
             BrowseImagePath: "[[[browse image path]]]",
             NoFileSelected: "[[[No file selected.]]]",
-
-            //UserNotificationSettings.js
-            NotificationSettings: "[[[Update Notification Settings]]]",
-            NotificationSettingsUpdated: "[[[Notification settings has been updated successfully.]]]",
-            NotificationSettingsUpdateFailed: "[[[Error while updating notification settings.]]]",
 
             //CustomAttributes
             AttributeNameValidator: "[[[Please enter the attribute name.]]]",
@@ -365,6 +375,7 @@
             EmbedSettings: "[[[Embed Settings]]]",
             ResetSecretSuccessAlert: "[[[Embed Secret has been updated successfully]]]",
             EmbedInvalidMessage: "[[[The embed dashboard URL must be used in an iframe.]]]",
+            ResetSecretFailureAlert: "[[[Error while updating embed settings.]]]",
 
             //Popover Content
             biStorePopoverContent: "[[[This database is to store data pulled from files and web data sources to visualize them in dashboards.]]]",
@@ -380,11 +391,19 @@
             LookAndFeel: "[[[Font Family]]]",
             UploadFont: "[[[Upload Font]]]",
             BrowseFont: "[[[Browse file path (.woff2)]]]",
-            FontSettings: "[[[Font Settings]]]",
+            LookAndFeelSettings: "[[[Look and feel settings.]]]",
+            LookAndFeelSettingsSuccess: "[[[Look and feel settings were updated successfully.]]]",
+            LookAndFeelSettingsFailure: "[[[Error occurred while updating the look and feel settings.]]]",
             //API Validation
             IdpTokenAPI: "[[[IdP Token API]]]",
             APIResponse: "[[[API Response]]]",
-            AutoDeployment: "[[[Auto Deployment]]]"
+            AutoDeployment: "[[[Auto Deployment]]]",
+
+            //upload-theme
+            ApplicationTheme: "[[[Manage Application Theme]]]",
+            DashboardTheme: "[[[Manage Dashboard Theme]]]",
+            CssFile: "[[[Select only .css file]]]",
+            CssFileExist: "[[[File already exists.]]]"
         }
     }
 };

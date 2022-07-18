@@ -1,0 +1,37 @@
+﻿<div id="look-and-feel-body">
+    <div class="sub-section last-sub-section col-xs-12  no-padding ">
+        <h3 class="title sub-section-heading">[[[Theme]]]</h3>
+
+        <div class="form-group section-content-first">
+            @Html.Label("appearance", "[[[Appearance]]]", new { @class = "app-textbox-label" })
+            <div id="appearance-container">
+                <div class="light-theme-required activation-mode" id="light">
+                    <input type="radio" id="light-theme-required" name="theme-required" class="css-radio" value="light" @(GlobalAppSettings.SystemSettings.Theme.Appearance == AppearanceTheme.Light.ToString().ToLower() ? "checked" : string.Empty) />
+                    <label for="light-theme-required" class="app-textbox-label radio-btn-label notransition" id="label-light-theme-required">[[[Light]]]</label>
+                </div>
+                <div class="dark-theme-required activation-mode" id="dark">
+                    <input type="radio" id="dark-theme-required" name="theme-required" class="css-radio" value="dark" @(GlobalAppSettings.SystemSettings.Theme.Appearance == AppearanceTheme.Dark.ToString().ToLower() ? "checked" : string.Empty) />
+                    <label for="dark-theme-required" class="app-textbox-label radio-btn-label notransition" id="label-dark-theme-required">[[[Dark]]]</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("application-theme", "[[[Application Custom Theme]]]", new { @class = "app-textbox-label" })
+            <p class="manage-theme-box">
+                <a href="javascript:void(0)" onclick="onUploadApplicationThemeDialogOpen()" id="woff-upload" title="[[[Upload the font file here.]]]">[[[Manage]]]</a>
+            </p>
+            <div class="admin-settings-drop-down col-lg-12 no-padding section-dropdown-content-first">
+                @Html.DropDownList("applicationTheme", ViewBag.ApplicationTheme as IEnumerable<SelectListItem>, new { id = "applicationTheme", @class = "admin-settings-drop-down", data_none_results_text = "[[[No results match]]]", data_size = "5", data_live_search = "false" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("dashboard-theme", "[[[Dashboard Theme]]]", new { @class = "app-textbox-label" })
+            <p class="manage-theme-box">
+                <a href="javascript:void(0)" onclick="onUploadDashboardThemeDialogOpen()" id="woff-upload" title="[[[Upload the font file here.]]]">[[[Manage]]]</a>
+            </p>
+            <div class="admin-settings-drop-down col-lg-12 no-padding">
+                @Html.DropDownList("dashboardTheme", ViewBag.DashboardTheme as IEnumerable<SelectListItem>, new { id = "dashboardTheme", @class = "admin-settings-drop-down", data_none_results_text = "[[[No results match]]]", data_size = "5", data_live_search = "false" })
+            </div>
+        </div>
+    </div>
+</div>

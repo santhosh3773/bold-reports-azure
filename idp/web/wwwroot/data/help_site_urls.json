@@ -297,5 +297,28 @@
         "redirect_id": null
       }
     }
+  },
+  {
+    "url_name": "ErrorLogs",
+    "boldbi": {
+      "onpremise": {
+        "uri": "",
+        "redirect_id": null
+      },
+      "cloud": {
+        "uri": "",
+        "redirect_id": null
+      }
+    },
+    "boldreports": {
+      "onpremise": {
+        "uri": "",
+        "redirect_id": null
+      },
+      "cloud": {
+        "uri": "",
+        "redirect_id": null
+      }
+    }
   }
 ]

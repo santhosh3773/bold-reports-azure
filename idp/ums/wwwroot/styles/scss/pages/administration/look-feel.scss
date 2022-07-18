@@ -1,10 +1,61 @@
 ﻿@import "../mixins.scss";
 
 #look-and-feel-container {
+    .admin-page-body {
+        .sub-section {
+            div.form-group:last-child {
+                margin: 0 0 32px 0;
+            }
+
+            .form-group {
+                margin: 0 0 16px 0;
+            }
+        }
+    }
+
     #look-and-feel-body {
-        .add-new-font {
-            padding: 5px 0px 0px 0px;
-            font-size: $app-text-size;
+
+        .section-content-first {
+            margin-top: 16px;
+        }
+
+        .section-dropdown-content-first {
+            margin-bottom: 28px;
+            margin-top: 0px;
+        }
+
+        #light {
+            padding-right: 16px;
+        }
+
+        .activation-mode {
+            display: inline-block;
+
+            .radio-btn-label {
+                margin-bottom: 0px !important;
+                font-size: $app-text-size;
+                font-weight: normal;
+                letter-spacing: 0.3px;
+                line-height: 18px;
+                padding-left: 26px !important;
+            }
+        }
+
+        .form-group {
+            width: 450px !important;
+
+            #appearance-container {
+                padding-bottom: 10px;
+            }
+
+            .manage-theme, .manage-theme-box {
+                display: inline;
+            }
+
+            .manage-theme-box {
+                float: right;
+                margin: 0 0 0px;
+            }
 
             #woff-upload {
                 color: $primary-color;
@@ -12,11 +63,38 @@
         }
 
         @include ej2NonFloat();
+
+        .e-btn-group {
+            font-size: 12px;
+
+            button {
+                padding: 5px 14px;
+            }
+
+            #dark, #light {
+                text-transform: none;
+                font-weight: unset !important;
+                border: 1px solid $grey-200;
+            }
+
+            .enable-theme {
+                background-color: $grey-100;
+            }
+        }
     }
 }
 
-#font-upload-dialog_wrapper {
-    @include dialogbox();
+#font-upload-dialog {
+
+    .e-dlg-content {
+        overflow: hidden;
+        padding: 0 !important;
+    }
+
+    .modal-content {
+        border: none !important;
+        box-shadow: none !important;
+    }
 
     .form-control {
         font-size: $app-text-size;
@@ -26,14 +104,14 @@
     }
 
     .font-label {
-        font-size:13px;
+        font-size: 13px;
         margin-top: 8px;
         font-weight: 400;
         padding-right: 45px;
     }
 
     .field-padding {
-        padding: 10px;
+        padding: 10px 0;
     }
 
     .padding-bottom {
@@ -55,16 +133,12 @@
         height: 28px;
         overflow: hidden;
         resize: none;
-        width: 80%;
-        border: 1px solid $border-color;
-        background-color: $admin-page-bg;
+        width: 81%;
         cursor: default;
     }
 
 
     .upload-file-btn {
-        background-color: $admin-page-bg;
-        border: 1px solid $border-color;
         height: 28px;
         line-height: 1;
         padding: 1px 1px 7px 1px;
@@ -85,5 +159,122 @@
         filter: alpha(opacity=0);
         width: 0;
     }
+
+    .modal-footer {
+        height: 48px !important;
+        width: 472px;
+        padding: 0px !important;
+
+        .secondary-button {
+            margin: 9px 0px 7px 0;
+        }
+
+        .primary-button {
+            margin: 9px 16px 7px 12px;
+        }
+    }
 }
 
+.applicationtheme-upload-dialog {
+    width: 400px !important;
+
+    .modal-content {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .e-dlg-content {
+        overflow: hidden;
+        padding: 0 !important;
+    }
+
+    .field-padding {
+        padding: 10px 0;
+    }
+
+    .padding-bottom {
+        padding-bottom: 20px;
+    }
+
+    .upload-file-btn {
+        height: 28px;
+        line-height: 1;
+        padding: 1px 1px 7px 1px;
+        width: 45px;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+    }
+
+    .theme-name {
+        width: 369px !important;
+    }
+
+    .font-label {
+        font-size: 13px;
+        margin-top: 8px;
+        font-weight: 400;
+        padding-right: 45px;
+    }
+
+    .form-control {
+        font-size: $app-text-size;
+        width: 260px;
+        height: $btn-height-normal;
+        line-height: normal;
+    }
+
+    .applicationtheme-file-name {
+        border-radius: 4px 0 0 4px;
+        box-shadow: none;
+        display: inline-block;
+        float: left;
+        height: 28px;
+        overflow: hidden;
+        resize: none;
+        width: 88%;
+        cursor: default;
+    }
+
+    .applicationthemeupload-validation-messages {
+        color: $validation-text-color;
+        display: block;
+        font-size: $validation-large-text-size;
+        margin-bottom: -16px;
+    }
+
+    input.upload-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        width: 0;
+    }
+
+    .modal-footer {
+        height: 48px !important;
+        width: 400px;
+        padding: 0px !important;
+
+        .secondary-button {
+            margin: 9px 0px 7px 0;
+           
+        }
+
+        .primary-button {
+            margin: 9px 16px 7px 12px;
+           
+        }
+    }
+
+    .applicationthemefileupload-validation-messages {
+        color: $validation-text-color;
+        display: block;
+        font-size: 12px;
+        margin-bottom: -16px;
+    }
+}

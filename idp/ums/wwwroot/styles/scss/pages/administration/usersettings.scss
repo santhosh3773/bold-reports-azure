@@ -6,6 +6,10 @@
         padding-right: 16px;
     }
 
+    .email-required-header {
+        margin-bottom: 10px;
+    }
+
     .activation-mode {
         display: inline-block;
 
@@ -27,8 +31,8 @@
         letter-spacing: 0.26px;
         font-size: $app-text-size;
         padding: 12px;
-        background-color: $embed-warning-bg-normal-color;
-        border: 1px solid $embed-warning-border-normal-color;
+        background-color: $warning-bg-normal-color;
+        border: 1px solid $warning-border-normal-color;
     }
 
     .activation {

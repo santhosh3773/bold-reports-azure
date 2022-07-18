@@ -537,7 +537,8 @@
                     hideHelpLink: isHideHelpLink,
                     customDomain: customDomain,
                     customBrandName: custombrandName,
-                    customLinks: window.customLinks
+                    customLinks: window.customLinks,
+                    contactMail: 'support@boldreports.com'
                 },
                 enableImageBlobing: true
             };
@@ -600,6 +601,7 @@
             $('#' + controlId + '_designer_header_reportName').val(reportName);
             designer.openAction = $.proxy(openBrowseDialog, this);
             designer.showImportData = true;
+            designer.hideLicense = true;
             if (isDraft === 'true' && isEmptyOrWhitespace(datasetName)) {
                 designer.openReportFromDraft(reportName);
             } else if (isEditReport) {

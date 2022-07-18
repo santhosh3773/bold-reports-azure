@@ -1,6 +1,6 @@
 ﻿@import "../../core/_variables.scss";
 @import "../../components/_buttons.scss";
-@import "../../themes/_light_cloud.scss";
+@import "../../default/default.scss";
 @import "../../core/_typography.scss";
 
 //unlock feature dialog - target element height
@@ -41,7 +41,7 @@
                 letter-spacing: 0.6px;
                 margin: 0;
                 padding: 0 52px 0 55px;
-                color: $primary;
+                color: $primary-color;
                 @extend %font;
             }
 
@@ -67,7 +67,7 @@
                 width: 216px;
                 height: 32px;
                 border-radius: 4px;
-                border: solid 1px $primary-btn-border-color;
+                border: solid 1px $primary-button-border-normal-color;
                 margin-bottom: 50px;
                 color: $white;
             }
@@ -89,7 +89,7 @@
 
                 a {
                     cursor: pointer;
-                    color: $primary;
+                    color: $primary-color;
 
                     &:hover {
                         color: $blue-secondary;
@@ -103,7 +103,7 @@
             }
 
             #contact-sales-cookie-content, #contact-sales-success {
-                color: $green;
+                color: $success;
                 padding: 0 20px;
             }
         }

@@ -16,7 +16,7 @@
 }
 
 @section MainSection{
-    @await Html.PartialAsync("_AdminMenu")
+    @await Html.PartialAsync("_AdminMenu", new ViewDataDictionary(ViewData) { { "IsManageLicensePage", true } })
 
     <div id="license-settings-container">
         <div id="subscription-plan-dialog">

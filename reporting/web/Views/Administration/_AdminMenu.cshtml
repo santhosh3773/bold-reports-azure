@@ -35,6 +35,12 @@
     var updateCardUrl = Url.Action("GetCardDetail", "Payment") ?? string.Empty;
     var conciergeSupportUrl = Url.Action("ConciergeSupport", "Support");
     var dataConnectorUrl = Url.Action("DataConnector", "Administration");
+    var isValidLicense = false;
+    if(ServerAppConfig.IsSelfHosted && (ViewBag.IsManageLicensePage == null || !ViewBag.IsManageLicensePage))
+    {
+        var licenseMessage = GlobalAppSettings.ValidateAndGetLicenseMessage();
+        isValidLicense = licenseMessage == null;
+    }
 }
 
 @if (canShowAdminMenu)
